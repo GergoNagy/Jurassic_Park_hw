@@ -1,5 +1,5 @@
 var Park = function(){
-  this.enclosure = enclosure;
+  this.enclosure = [];
 }
 
 module.exports = Park;
