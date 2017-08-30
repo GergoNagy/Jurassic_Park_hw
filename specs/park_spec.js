@@ -42,10 +42,10 @@ describe("Park", function(){
 
   it("how many dino after a year", function(){
     park.addDino(dinosaur2);
-    park.populationByYear(1,1);
-    console.log("",park);
-    console.log("after",park.enclosure[0].offSpring);
-    assert.strictEqual(park.populationByYear, 7);
+    park.addDino(dinosaur2);
+    park.populationByYear(1);
+    console.log(park.populationByYear);
+    assert.strictEqual(park.populationByYear, 14);
   })
 
 })

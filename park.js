@@ -9,22 +9,24 @@ Park.prototype = {
     this.enclosure.push(dino);
   },
   removeByTipe: function(type){
-    for( var i = this.enclosure.length - 1; i > -1; i--){
-      if (this.enclosure[i].type == type) {
-        this.enclosure.splice(i, 1);
+    var dino = [];
+      for (var i = 0; i < this.enclosure.length; i++) {
+      if (this.enclosure[i].type !== type){
+        dino.push(this.enclosure[i]);
       }
     }
+    this.enclosure = dino;
   },
   offspringMoreThanTwo: function(number){
-    for( var i = this.enclosure.length - 1; i > -1; i--){
-      if (this.enclosure[i].offSpring <= number){
-        this.enclosure.splice(i, 1);
+    var dino = [];
+    for (var i = 0; i < this.enclosure.length; i++) {
+      if (this.enclosure[i].offSpring >= number){
+        dino.push(this.enclosure[i]);
       }
     }
-  },
-  populationByYear: function(numberOfDino, year){
-    this.enclosure[0].offSpring;
+    this.enclosure = dino;
   }
+  
 }
 
 module.exports = Park;
